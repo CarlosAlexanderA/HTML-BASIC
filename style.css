@@ -1,0 +1,141 @@
+/* .form{
+    display: flex;
+    justify-content: space-between;
+    gap: .5rem;
+    border: 2px solid whitesmoke;
+    padding: 1rem;
+    font-family: sans-serif;
+    font-weight: 500;
+    background: #2d2f35;
+    flex-wrap: wrap;
+
+
+}
+.name{
+    flex: 1 1 160px;
+}
+
+.email{
+    flex: 1 1 200px;
+}
+.button{
+    flex: 1 1 auto;
+}
+
+.form div{
+    padding: 1rem;
+    border-radius: .5rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+input{
+    background: initial;
+    border: none;
+    border-bottom: 1px solid whitesmoke;
+    color: inherit;
+    padding-bottom: .7rem;
+    border-radius: .1rem;
+
+}
+.button button{
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    font-size: 1.2em;
+
+    
+} */
+
+html{
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+header{
+    flex: 1 1 auto;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: .2rem 1rem;
+}
+nav div{
+    color: rgb(39, 39, 39);
+}
+main{
+    flex: 2 1 100%;
+    /* background: #000; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .content{
+    flex: 0 1 40%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+main .content .logo{
+    position: relative;
+    flex-basis: 100%;
+}   
+
+.logo img{
+    position: relative;
+    bottom: -4em;
+    width: 100%;
+}
+main .content .search{
+    z-index: 100;
+    flex-basis: 100%;
+    display: flex;
+}
+main .content .buttons{
+    flex-basis: auto;
+    display: flex;
+    justify-content: center;
+    gap: .5em;
+
+}
+
+main .content .buttons button{
+    padding: .5em 1em;
+    border-radius: .5em;
+    border: none;
+
+}
+main .content .search #search-bar{
+    flex: 1 1 auto;    
+    padding: .5rem 1rem;
+    box-sizing: border-box;
+    border-radius: 3rem;
+    margin: .5rem 1rem;
+    border: 1px solid rgb(207, 207, 207);
+    
+}
+
+footer{
+    background: whitesmoke;
+    flex: 1 1 auto;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: .8rem;
+}
+li{
+    color: inherit;
+}

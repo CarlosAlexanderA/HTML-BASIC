@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:ital,wght@0,300;0,700;1,300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    margin: 0 20%;
+}
+header{
+    width: 100%;
+    background-color: #1f2937;
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: whitesmoke;
+}
+header nav .links{
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+header nav .logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+a{
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: inherit;
+}
+p{
+    font-size: 1.1rem;
+}
+main{
+    width: 100%;
+}
+main .hero{
+    width: 100%;
+    background-color: #1f2937;
+}
+.hero-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+main .hero .item{
+    width: 50%;
+    
+}
+img{
+    width: 100%;
+}
+section{
+    padding: 4rem 0;
+}
+.item{
+    color: white;
+}
+.hero-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: .8rem;
+}
+.hero-text h1{
+    font-size: 3rem;
+}
+button{
+    background-color: #3882f6;
+    border:  none;
+    color: inherit;
+    font-size: 1.2rem;
+    padding: .5em 2em;
+    border-radius: .5em;
+    font-weight: 700;
+}
+
+.info-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.info-container h2{
+    font-size: 2.3rem;
+    font-weight: 700;
+}
+.info-container .info-boxs{
+    display: flex;
+    gap: 3rem;
+}
+
+.info-boxs .box{
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+    gap: .5rem;
+}
+.info-boxs .box .square{
+    flex: 1 1 15rem;
+    border: .4rem solid #3882f6;
+    border-radius: 1.5rem;
+}
+.info-boxs .box p{
+    display: inline;
+}
+.phrase{
+    background: #e5e7eb;
+}
+.phrase-container{
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    gap: .5rem;
+}
+.phrase-container h2{
+    font-size: 2.3rem;
+    font-weight: 300;
+    font-style: italic;
+}
+.phrase-container p{
+    align-self: flex-end;
+    font-weight: 700;
+}
+.phrase-container p::before{
+    content: "-";
+}
+
+.call-container{
+    background-color: #3882f6;
+    border-radius: .3rem;
+    padding: 3rem 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.call-container button{
+    border: .2rem solid white;
+}
+
+footer{
+    background-color: #1f2937;
+    padding: 1rem 0;
+    color: white;
+    
+}
+
+footer nav{
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+footer nav p{
+    font-size: 1rem;
+}
