@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        .green{
+            color: yellowgreen;
+            font-weight: bold;
+            font-size: 2rem;
+        }
+    </style>
+    <h1>Fizz Buzz</h1>
+        <input type="number" name="number" id="number">
+        <button id="Enviar">Calcular</button>
+
+        <div class="showNumbers">
+        </div>
+        <br>
+    <h1>rock, Paper, Sissors</h1>
+        <input type="text" id="game" name="game">
+        <button id="play">Jugar</button>
+
+        <div class="content_User">
+            <div id="user">
+                <p>Usuario <span id="scoreP">0</span></p>
+            </div>
+            <div id="computer">
+                <p>Computadora <span id="scoreC">0</span></p>
+            </div>
+        </div>
+
+        <div id="viewWinner">
+
+        </div>
+
+
+        
+    <script>
+        let number = document.getElementById("number");
+        let button = document.getElementById("Enviar");
+        let showNumbers = document.querySelector(".showNumbers");
+        let parrf = document.createElement("p");
+        
+
+        button.addEventListener("click",()=>{
+
+            if(showNumbers.firstChild){
+                showNumbers.removeChild(showNumbers.firstChild)
+            }
+
+            let result = [];
+
+            for (let i = 1; i <= number.valueAsNumber; i++) {
+                if(i % 3 === 0 && i % 5 ==0)
+                    result.push("Fizz Buzz");
+                else if( i%3 === 0)
+                    result.push("Fizz");
+                else if(i%5 == 0)
+                    result.push("Buzz");
+                else
+                    result.push(i);
+            }
+
+            parrf.textContent = result.join(" , ");
+
+            showNumbers.appendChild(parrf);
+            console.log(result);
+        })
+
+
+        const getComputerChoice = () =>{
+            let options = ["sissors","rock","paper"];
+            let numRandom = Math.floor(Math.random()*3)
+            console.log(numRandom);
+            return options[numRandom];
+        }
+
+        const playRound = (playerSelection, computerSelection) =>{
+            // 
+            //
+            let result = [];
+            // console.log(computerSelection);
+            switch (playerSelection) {
+                case "rock":
+                    if (computerSelection === "sissors") {
+                        result = ["You Win! Rock beats Sissors", true];
+                    }else if(computerSelection === "paper"){
+                        result = ["You Lose! Paper beats Rock", false];
+                    } else{
+                        result = ["Empate"];
+                    }
+                    break;
+                case "sissors":
+                    if (computerSelection === "paper") {
+                        result = ["You Win! Sissors beats Paper", true];
+                    }else if(computerSelection === "rock"){
+                        result = ["You Lose! Rock beats sissors", false];
+                    }else{
+                        result = ["Empate"];
+                    }
+                    break;
+                case "paper":
+                    if (computerSelection === "rock") {
+                        result = ["You Win! Paper beats Rock", true];
+                    }else if(computerSelection === "sissors"){
+                        result = ["You Lose! Sissors beats Paper", false];
+                    }else{
+                        result = ["Empate"];
+                    }
+                    break;
+                default:
+                    result = ["no puso bien las cosas"];
+                    break;
+            }
+            return result;
+        }
+
+        const textGame = document.getElementById("game");
+        const play = document.getElementById("play");
+        const winner = document.getElementById("viewWinner");
+        const player = document.getElementById("scoreP");
+        const compu = document.getElementById("scoreC");
+
+        const game = () =>{
+
+        }
+        let scoreP = 0;
+        let scoreC = 0;
+
+        play.addEventListener("click", async () =>{
+            let playerSelection = textGame.value;
+            let computerSelection = getComputerChoice();
+            console.log(computerSelection)
+
+            let textWinner = document.createElement("p")
+            let data = playRound(playerSelection,computerSelection)
+            textWinner.textContent = data[0];
+            console.log(data[1]);
+            if(data[1] === true){
+                scoreP++;
+            } else if(data[1] === false){
+                scoreC++;
+            }
+            textGame.value = "";
+            textGame.focus();
+
+            player.textContent = scoreP;
+            compu.textContent = scoreC;
+
+
+            winner.appendChild(textWinner);
+
+            if (scoreC === 5 || scoreP === 5) {
+                parrf.textContent = `Winner is ${scoreP == 5 ? "Usuario" : "Computadora"}`;
+                textGame.disabled = true;
+                play.disabled = true;
+                parrf.className += "green"
+                winner.appendChild(parrf)
+            }
+
+        });
+
+
+        
+        // console.log(playRound(playerSelection,computerSelection));
+    </script>
+</body>
+</html>
