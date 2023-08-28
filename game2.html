@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="game2.js" defer></script>
+</head>
+<body>
+    <div class="container grid grid-cols-3 bg-red-100 mx-auto gap-10 px-8 py-4">
+        <button class="bg-blue-200 py-2 px-4" id="sissors">Sissors</button>
+        <button class="bg-blue-200 py-2 px-4" id="rock">Rock</button>
+        <button class="bg-blue-200 py-2 px-4" id="paper">Paper</button>
+        <div class="col-span-3 grid grid-cols-2" id="points">
+            <p class="computer">Puntos de la Computadora <span id="cPoint">0</span></p>
+            <p class="player"> Puntos de el Jugador <span id="pPoint">0</span></p>     
+        </div>
+        <div class="col-span-3" id="output">
+
+        </div>
+    </div>
+</body>
+</html>
