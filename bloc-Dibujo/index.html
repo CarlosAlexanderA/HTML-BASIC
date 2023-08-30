@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <style>
+        /* .number-grid{
+            grid-template-columns: repeat(16, minmax(0, 1fr));
+            grid-template-rows: repeat(16, minmax(0, 1fr));
+        } */
+        
+    </style>
+    <div class="container flex flex-col number-grid bg-red-500 mx-auto" >
+        <div class="basis-full py-2 flex gap-4 justify-center items-center mb-8 mt-4">
+            <div>
+                <label for="cols" class="text-white">Columnas: </label>
+                <input type="number" name="cols" id="cols" class="w-20 h-8">
+            </div>
+            <div>
+                <label for="rows" class="text-white">Filas: </label>
+                <input type="number" name="rows" id="rows" class="w-20 h-8">
+            </div>
+            <button class="rounded-lg bg-blue-500 shadow-lg py-2 px-4 text-white " id="btnGrid">Cambiar</button>
+
+        </div>
+        <div class="container flex flex-col number-grid bg-blue-500" id="container">
+            <div class="basis-full flex justify-center content-center">
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+            </div>
+            <div class="basis-full flex justify-center content-center">
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+            </div>
+            <div class="basis-full flex justify-center content-center">
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+                <div class="bg-white border border-black h-16 w-16 ">01</div>
+            </div>
+        </div>
+        
+        
+    </div>
+</body>
+</html>
